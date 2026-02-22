@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Documentary soundtrack placement placeholder">
+  <defs>
+    <linearGradient id="g4" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#070a20" />
+      <stop offset="100%" stop-color="#2f347d" />
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g4)" />
+  <rect x="110" y="110" width="1060" height="500" rx="30" fill="#1f2358" opacity="0.4" />
+  <path d="M170 495 C350 375, 530 560, 690 450 C850 340, 980 440, 1110 350" fill="none" stroke="#bb82ff" stroke-width="13" stroke-linecap="round" opacity="0.73" />
+  <path d="M170 550 C350 430, 530 615, 690 505 C850 394, 980 495, 1110 405" fill="none" stroke="#77d7ff" stroke-width="10" stroke-linecap="round" opacity="0.73" />
+  <text x="165" y="230" fill="#f4f1ff" font-size="54" font-family="Outfit, Arial, sans-serif">Documentary Soundtrack</text>
+  <text x="165" y="295" fill="#cdc7f5" font-size="34" font-family="Outfit, Arial, sans-serif">Sample Streaming Platform</text>
+</svg>

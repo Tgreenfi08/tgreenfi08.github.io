@@ -1,45 +1,101 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terique Greenfield | Composer</title>
-  <style>
-    body { font-family: -apple-system, system-ui, Arial; margin: 0; line-height: 1.5; }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 48px 20px; }
-    h1 { margin: 0 0 8px; }
-    .sub { opacity: .75; margin: 0 0 28px; }
-    .card { border: 1px solid #e6e6e6; border-radius: 14px; padding: 18px; margin: 14px 0; }
-    a { text-decoration: none; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terique Greenfield | Music Composer</title>
+  <meta name="description" content="Terique Greenfield music composer portfolio website.">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-  <div class="wrap">
-    <h1>Terique Greenfield</h1>
-    <p class="sub">Composer • Producer • Sync-ready music</p>
-
-    <div class="card">
-      <h2>Featured Tracks</h2>
-      <p>Embed SoundCloud / YouTube / Spotify here.</p>
+<body data-page="home">
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">TG</span>
+        <span class="brand-text">Terique Greenfield</span>
+      </a>
+      <button class="nav-toggle" data-nav-toggle type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" data-site-nav>
+        <a href="index.html" data-nav-link="home">Home</a>
+        <a href="about.html" data-nav-link="about">About</a>
+        <a href="listen.html" data-nav-link="listen">Listen</a>
+        <a href="placements.html" data-nav-link="placements">Placements</a>
+        <a href="contact.html" data-nav-link="contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="card">
-      <h2>About</h2>
-      <p>Short bio goes here.</p>
-    </div>
+  <main class="page-shell home-shell">
+    <section class="hero" data-reveal>
+      <div class="note-field" data-note-field></div>
 
-    <div class="card">
-      <h2>Credits</h2>
-      <ul>
-        <li>Placement / credit 1</li>
-        <li>Placement / credit 2</li>
-      </ul>
-    </div>
+      <svg class="music-svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="noteFill" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#8be3ff" />
+            <stop offset="55%" stop-color="#62a8ff" />
+            <stop offset="100%" stop-color="#bb7dff" />
+          </linearGradient>
+          <filter id="noteGlow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="4" result="glow" />
+            <feMerge>
+              <feMergeNode in="glow" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
 
-    <div class="card">
-      <h2>Contact</h2>
-      <p><a href="mailto:tgreen@tdmss.com">tgreen@tdmss.com</a></p>
+        <path class="staff-path" d="M-20 430 C 230 370, 470 540, 760 420 C 930 350, 1100 390, 1230 330" />
+        <path class="staff-path" d="M-20 470 C 250 405, 450 575, 760 455 C 960 390, 1090 430, 1230 368" />
+        <path class="staff-path" d="M-20 510 C 260 450, 450 608, 760 490 C 980 430, 1110 466, 1230 410" />
+
+        <g class="svg-note svg-note-a">
+          <ellipse cx="0" cy="0" rx="20" ry="14" />
+          <rect x="16" y="-72" width="8" height="72" rx="4" />
+          <path d="M24 -72 C50 -74 60 -58 55 -38 C44 -44 35 -45 24 -42 Z" />
+        </g>
+
+        <g class="svg-note svg-note-b">
+          <ellipse cx="0" cy="0" rx="18" ry="13" />
+          <rect x="14" y="-65" width="7" height="65" rx="4" />
+          <path d="M21 -65 C43 -66 53 -53 48 -35 C38 -40 30 -41 21 -38 Z" />
+        </g>
+
+        <g class="svg-note svg-note-c">
+          <ellipse cx="0" cy="0" rx="21" ry="15" />
+          <rect x="16" y="-74" width="8" height="74" rx="4" />
+          <path d="M24 -74 C50 -76 63 -60 57 -40 C45 -46 36 -47 24 -44 Z" />
+        </g>
+      </svg>
+
+      <div class="hero-content">
+        <p class="eyebrow">Original Music for Film, TV and Media</p>
+        <h1 class="hero-title">Terique Greenfield<br>Music Composer</h1>
+        <div class="hero-support">
+          <p class="hero-subtitle">
+            Cinematic storytelling through rhythm, harmony, and emotional tone.
+            Explore original compositions, placements, and featured works.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="listen.html">Listen</a>
+            <a class="btn btn-ghost" href="contact.html">Work Together</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <p>© <span data-year></span> Terique Greenfield. All rights reserved.</p>
+      <p>Music Composer</p>
     </div>
-  </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

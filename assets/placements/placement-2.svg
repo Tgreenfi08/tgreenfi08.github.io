@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="TV drama placement placeholder">
+  <defs>
+    <linearGradient id="g2" x1="0" x2="1" y1="1" y2="0">
+      <stop offset="0%" stop-color="#120b34" />
+      <stop offset="100%" stop-color="#5342cb" />
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g2)" />
+  <rect x="120" y="130" width="1040" height="460" rx="34" fill="#2a1f67" opacity="0.48" />
+  <path d="M220 420 C360 260, 560 540, 760 360 C870 270, 980 380, 1100 300" fill="none" stroke="#87e4ff" stroke-width="18" stroke-linecap="round" opacity="0.7" />
+  <text x="170" y="235" fill="#e8e8ff" font-size="54" font-family="Outfit, Arial, sans-serif">TV Drama Underscore</text>
+  <text x="170" y="300" fill="#c6c4ff" font-size="34" font-family="Outfit, Arial, sans-serif">Sample Cable Network</text>
+</svg>

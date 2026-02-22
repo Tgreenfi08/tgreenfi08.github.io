@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-label="Film trailer placement placeholder">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#12285f" />
+      <stop offset="100%" stop-color="#3e75dd" />
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g1)" />
+  <circle cx="980" cy="170" r="150" fill="#70d6ff" opacity="0.35" />
+  <path d="M0 560 C250 480, 520 660, 900 540 C1090 480, 1190 500, 1280 470 L1280 720 L0 720 Z" fill="#0a1639" opacity="0.8" />
+  <text x="90" y="200" fill="#d9eeff" font-size="54" font-family="Outfit, Arial, sans-serif">Film Trailer Feature</text>
+  <text x="90" y="265" fill="#a9c8ff" font-size="34" font-family="Outfit, Arial, sans-serif">Sample Production House</text>
+</svg>
