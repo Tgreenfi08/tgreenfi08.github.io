@@ -134,77 +134,6 @@ function initPlacementsMarquee() {
   track.innerHTML = `${cards}${cards}`;
 }
 
-function initContactForm() {
-  const form = document.querySelector("[data-contact-form]");
-  if (!form) {
-    return;
-  }
-
-  const statusEl = document.querySelector("[data-form-status]");
-  const submitLabel = document.querySelector("[data-submit-label]");
-
-  const statusMessages = {
-    sent: "Message sent successfully.",
-    "invalid-method": "Invalid request type. Please submit the form directly.",
-    "invalid-input": "Please complete required fields with a valid email.",
-    "send-failed": "Could not send message. Please try again or email directly.",
-  };
-
-  const params = new URLSearchParams(window.location.search);
-  const phpStatus = params.get("status");
-  if (phpStatus && statusEl) {
-    statusEl.textContent = statusMessages[phpStatus] || "Form status updated.";
-  }
-
-  const staticHost =
-    window.location.protocol === "file:" ||
-    /github\.io$/i.test(window.location.hostname);
-
-  if (!staticHost) {
-    if (statusEl && !phpStatus) {
-      statusEl.textContent =
-        "Form is set to post to contact.php on hosts that support PHP mail().";
-    }
-    return;
-  }
-
-  if (submitLabel) {
-    submitLabel.textContent = "Open Email App";
-  }
-
-  if (statusEl && !phpStatus) {
-    statusEl.textContent =
-      "GitHub Pages is static, so this opens your email app with your message prefilled.";
-  }
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    if (!form.reportValidity()) {
-      return;
-    }
-
-    const formData = new FormData(form);
-    const recipient = (form.dataset.recipient || "tgreen@tdmss.com").trim();
-    const subject = String(formData.get("subject") || "Website Contact").trim();
-    const body = [
-      `Name: ${String(formData.get("name") || "")}`,
-      `Email: ${String(formData.get("email") || "")}`,
-      `Phone: ${String(formData.get("phone") || "Not provided")}`,
-      "",
-      String(formData.get("message") || ""),
-    ].join("\n");
-
-    const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    window.location.href = mailtoUrl;
-
-    if (statusEl) {
-      statusEl.textContent = "Opening your email app now.";
-    }
-  });
-}
-
 function setYear() {
   const yearEl = document.querySelector("[data-year]");
   if (yearEl) {
@@ -218,6 +147,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initRevealAnimations();
   initHeroNoteParticles();
   initPlacementsMarquee();
-  initContactForm();
   setYear();
 });

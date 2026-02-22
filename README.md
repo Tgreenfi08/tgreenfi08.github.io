@@ -7,8 +7,7 @@ Responsive multi-page portfolio site designed for GitHub Pages + Cloudflare.
 - `about.html` - About and creative direction
 - `listen.html` - SoundCloud embed + YouTube section
 - `placements.html` - Slowly moving left-to-right placements carousel
-- `contact.html` - Contact form UI
-- `contact.php` - Optional PHP mail handler for PHP-capable hosting
+- `contact.html` - Contact page with image-based email display
 
 ## Add Your Home Backdrop
 1. Place your provided home image at: `assets/images/home-backdrop.jpg`
@@ -19,10 +18,10 @@ Responsive multi-page portfolio site designed for GitHub Pages + Cloudflare.
 2. Edit the `placementItems` array in `assets/js/main.js`
 3. Update each item's `title`, `outlet`, and `image` path
 
-## Set Contact Email
-1. In `contact.html`, update `data-recipient="your@email.com"`
-2. In `contact.php`, update `$to = 'your@email.com';`
-3. In `contact.php`, update `From: no-reply@yourdomain.com` to your domain email
+## Set Contact Email Image
+1. Export your image that shows your email address.
+2. Save it as `assets/images/contact-email-card.svg` (or update the image filename in `contact.html`).
+3. Keep dimensions around 1000px wide for best clarity.
 
 ## Preview Locally on Mac
 Run from this project folder:
@@ -50,5 +49,4 @@ Then open:
 4. Keep Cloudflare SSL mode at `Full` or `Full (strict)` once certs are active
 
 ## Important Hosting Note
-GitHub Pages does not run PHP. On GitHub Pages, the Contact form opens your email app (mailto fallback).
-If you move to a PHP-capable host later, `contact.php` will process form submissions server-side.
+GitHub Pages is static hosting. The contact page now shows an image-based email instead of a form.
